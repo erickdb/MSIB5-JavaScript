@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 4 JavaScript Erick Darmawan Boeniarto</title>
+</head>
+
+<body>
+
+
+    <script>
+        class gempa {
+            constructor(lokasi, skala) {
+                this.lokasi = lokasi
+                this.skala = skala
+            }
+            skala_gempa() {
+                let dampak = "";
+                if (this.skala < 2) {
+                    dampak = "Tidak Terasa";
+                    document.write(`peringatan Gempa!!,<br>lokasi : ${this.lokasi},<br> Skala : ${this.skala},<br>dampak : ${dampak} <hr/>`)
+                } else if (this.skala >= 2 && this.skala < 4) {
+                    dampak = "Bangunan Retak2";
+                    document.write(`peringatan Gempa!!,<br>lokasi : ${this.lokasi},<br> Skala : ${this.skala},<br>dampak : ${dampak} <hr/>`)
+                } else if (this.skala >= 4 && this.skala < 8) {
+                    dampak = "Bangunan Roboh";
+                    document.write(`peringatan Gempa!!,<br>lokasi : ${this.lokasi},<br> Skala : ${this.skala},<br>dampak : ${dampak} <hr/>`)
+                } else if (this.skala >= 8 && this.skala <= 10) {
+                    dampak = "Negara Hancur";
+                    document.write(`peringatan Gempa!!,<br>lokasi : ${this.lokasi},<br> Skala : ${this.skala},<br>dampak : ${dampak} <hr/>`)
+                }
+
+                return `Gempa di ${this.lokasi} dengan skala ${this.skala}: ${dampak}`;
+
+
+            }
+        }
+        //Object 1
+        let gempa1 = new gempa ('Jepang',1)
+        gempa1.skala_gempa();
+
+        //object 2
+        let gempa2 = new gempa ('Korea',2)
+        gempa2.skala_gempa();
+
+        //object 3
+        let gempa3 = new gempa ('China',3)
+        gempa3.skala_gempa();
+
+        //object 4
+        let gempa4 = new gempa ('Filiphina',4)
+        gempa4.skala_gempa();
+
+        //object 5
+        let gempa5 = new gempa ('Thailand',5)
+        gempa5.skala_gempa();
+
+        //object 6
+        let gempa6 = new gempa ('Malaysia',6)
+        gempa6.skala_gempa();
+
+        //object 7
+        let gempa7 = new gempa ('Singapore',7)
+        gempa7.skala_gempa();
+
+        //object 8
+        let gempa8 = new gempa ('Indonesia',8)
+        gempa8.skala_gempa();
+
+
+    </script>
+</body>
+
+</html>
