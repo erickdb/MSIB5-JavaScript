@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas JavaScript</title>
+</head>
+<body>
+    
+
+
+    <script>
+        // Mengambil input dari pengguna
+        
+        var pelanggan = "budi";
+        var produkPilihan = "AC";
+        var jml_beli = 1;
+        
+        // Fungsi untuk menghitung harga kotor
+            var hargaSatuan;
+            
+            if (produkPilihan === "TV") {
+                hargaSatuan = 2000000;
+            } else if (produkPilihan === "AC") {
+                hargaSatuan = 3000000;
+            } else if (produkPilihan === "Kulkas") {
+                hargaSatuan = 4000000;
+            } else {
+                hargaSatuan = 0;
+            }
+
+            // hitung harga kotor
+            let hargaKotor = hargaSatuan * jml_beli;
+            
+            // Menghitung diskon menggunakan operator ternary
+            var diskon =(jml_beli > 1) ? ((produkPilihan === "Kulkas" && jml_beli >= 3) ? 0.3 : 0.1) : 0;;
+            
+            // Menghitung PPN
+            var ppn = (hargaKotor * (1 - diskon) * 0.11);
+            
+            // Menghitung harga bayar
+            var hargaBayar = (hargaKotor * (1 - diskon) + ppn);
+
+            // Cetak hasil
+
+        document.write("Nama Pelanggan: " + pelanggan +
+        "<br/>Produk Pilihan: " + produkPilihan +
+        "<br/>Harga Satuan: Rp. " + hargaSatuan +
+        "<br/>Jumlah Beli: " + jml_beli +
+        "<br/>Harga Kotor: Rp. " + hargaKotor +
+        "<br/>Diskon:" + diskon  *100 + "%" +
+        "<br/>PPN: Rp. " + ppn +
+        "<br/>Harga Bayar: Rp. " + hargaBayar );
+        
+        
+
+    </script>
+</body>
+</html>
